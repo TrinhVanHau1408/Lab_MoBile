@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/csll_parent_item_student"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="10dp">
+
+    <TextView
+        android:id="@+id/txt_item_student_masv"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:text="SV01"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_item_student_name"
+        app:layout_constraintTop_toTopOf="@+id/txt_item_student_name"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/txt_item_student_name"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:text="Trịnh Văn Hậu"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/item_btn_edit_student"
+        app:layout_constraintStart_toEndOf="@+id/txt_item_student_masv"
+        app:layout_constraintTop_toTopOf="@+id/item_btn_edit_student" />
+
+    <Button
+        android:id="@+id/item_btn_edit_student"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="Sửa"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/item_btn_delete_student"
+        tools:layout_editor_absoluteY="10dp" />
+
+    <Button
+        android:id="@+id/item_btn_delete_student"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="Xóa"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_btn_edit_student"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/item_btn_edit_student" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    android:paddingHorizontal="5dp"
+
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtLBName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textSize="@dimen/text_size"
+       />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLBName"
+        app:layout_constraintStart_toEndOf="@+id/txtLBName"
+        app:layout_constraintTop_toTopOf="@+id/txtLBName" />
+
+    <TextView
+        android:id="@+id/txtLBThumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/text_size"
+        android:text="@string/thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <Spinner
+        android:id="@+id/spThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLBThumbnail"
+        app:layout_constraintStart_toEndOf="@+id/txtLBThumbnail"
+        app:layout_constraintTop_toTopOf="@+id/txtLBThumbnail" />
+
+    <TextView
+        android:id="@+id/txtLBPromotion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:text="@string/promotion"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/spThumbnail" />
+
+    <CheckBox
+        android:id="@+id/cbPromotion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLBPromotion"
+        app:layout_constraintStart_toEndOf="@+id/txtLBPromotion"
+        app:layout_constraintTop_toTopOf="@+id/txtLBPromotion" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:text="@string/add_a_new_dish"
+        android:paddingVertical="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/cbPromotion"
+        />
+
+    <GridView
+        android:id="@+id/gvDish"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:numColumns="2"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

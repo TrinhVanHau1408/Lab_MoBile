@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Student</string>
+    <string name="student_id">ID:</string>
+    <string name="student_name">Name:</string>
+    <string name="student_address">Address:</string>
+    <string name="student_phone">Phone number:</string>
+    <string name="add_student">ADD STUDENT</string>
+
+</resources>
